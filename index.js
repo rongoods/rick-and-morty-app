@@ -60,3 +60,12 @@ prevButton.addEventListener("click", () => {
   pagination.textContent = `${page} / 42`;
   fetchCharacters();
 });
+
+searchBar.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const search = Object.fromEntries(formData);
+  searchQuery = search.query;
+
+  fetchCharacters();
+});

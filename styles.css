@@ -17,8 +17,9 @@
 
 body {
   font-family: var(--font-family);
-  color: var(--color-primary);
+  color: green;
   padding: 20px;
+  background-color: black;
 }
 
 main {
