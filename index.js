@@ -15,8 +15,6 @@ let maxPage = 42;
 let page = 1;
 let searchQuery = "";
 
-console.log(searchQuery);
-
 let url = `https://rickandmortyapi.com/api/character/?page=${page}&name=${searchQuery}`;
 
 async function fetchCharacters() {
@@ -44,7 +42,6 @@ nextButton.addEventListener("click", () => {
     page++;
   }
   url = `https://rickandmortyapi.com/api/character/?page=${page}`;
-  console.log(url);
   cardContainer.innerHTML = "";
   pagination.textContent = `${page} / 42`;
   fetchCharacters();
@@ -57,7 +54,6 @@ prevButton.addEventListener("click", () => {
     page--;
   }
   url = `https://rickandmortyapi.com/api/character/?page=${page}`;
-  console.log(url);
   cardContainer.innerHTML = "";
   pagination.textContent = `${page} / 42`;
   fetchCharacters();
@@ -67,7 +63,6 @@ searchBar.addEventListener("submit", async (e) => {
   e.preventDefault();
   cardContainer.innerHTML = "";
   const sarchInput = document.querySelector(".search-bar__input").value;
-  console.log("............", sarchInput);
   url = `https://rickandmortyapi.com/api/character/?page=${page}&name=${sarchInput}`;
   fetchCharacters();
 });

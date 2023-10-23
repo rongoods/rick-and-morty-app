@@ -29,5 +29,7 @@ main {
 }
 
 .title {
-  padding: 10px 0;
+  margin-top: 5px;
+  padding: 10px;
+  position: fixed;
 }
